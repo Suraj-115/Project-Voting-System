@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ElectSure</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+      }
+
+      header {
+        background-color: #249cdd;
+        padding: 1rem 0;
+        text-align: center;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 2rem auto;
+        margin-top: 120px;
+        padding: 1rem;
+        background-color: rgb(249, 229, 204);
+        opacity: 0.9;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+      body {
+        background-image: url("https://img.freepik.com/premium-vector/voting-hand-india-election-vector-illustration_667085-68.jpg?semt=ais_hybrid");
+        background-size: 100%;
+      }
+
+      .h {
+        color: #000000;
+        display: inline-flex;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+      }
+
+      input,
+      select,
+      button {
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      .success {
+        color: green;
+        font-weight: bold;
+        margin-top: 1rem;
+      }
+      #charge {
+        margin-left: auto;
+        text-align: right;
+      }
+      .h {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .hhh {
+        margin-left: 40px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-variant: small-caps;
+        font-style: italic;
+        text-shadow: 0 0 3px greenyellow;
+      }
+      .hh {
+        margin-right: 40px;
+        font-family: "Lucida Handwriting", cursive;
+        color: goldenrod;
+        letter-spacing: 2px;
+        text-shadow: 0 0 3px rgb(166, 255, 0);
+      }
+      nav {
+        height: 60px;
+        width: 100%;
+        background-color: #78b3ce;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      nav a {
+        text-decoration: none;
+        font-size: 25px;
+        color: black;
+        font-weight: 550;
+      }
+
+      a:hover {
+        border: 2px solid black;
+        background-color: rgb(0, 94, 255);
+        color: azure;
+        border-radius: 15px;
+      }
+      .counts {
+        margin-left: 590px;
+        margin-top: 120px;
+      }
+      .countss {
+        color: rgb(143, 5, 248);
+        font-style: italic;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      footer {
+        height: 280px;
+        background-color: rgb(27, 24, 24);
+        opacity: 0.9;
+        margin-top: 170px;
+        padding-top: 0;
+      }
+
+      .foot-top {
+        display: flex;
+        justify-content: space-evenly;
+        color: azure;
+      }
+
+      .foot-box {
+        display: inline-block;
+      }
+
+      .foot-box h2 {
+        margin-top: 20px;
+        font-size: 20px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+
+      .foot-box li {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: 300;
+      }
+
+      .foot-box h2:hover {
+        /* text-decoration: underline; */
+        transform: scale(1.25);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="h">
+        <div>
+          <h1 class="heed">
+            <span style="color: rgb(37, 244, 1)">~Elect</span
+            ><span style="color: white">Sure~</span>
+          </h1>
+        </div>
+        <div id="charge"><h1 class="hh">Take Charge Of Your Vote</h1></div>
+      </div>
+    </header>
+    <nav class="nav">
+      <a class="nav-" href="#">Home</a>
+      <a class="nav-" href="#">About Us</a>
+      <a class="nav-" href="#">Features</a>
+      <a class="nav-" href="#">Services</a>
+      <a class="nav-" href="#">Pricing</a>
+      <a class="nav-" href="#">Contact Us</a>
+    </nav>
+    <div class="container">
+      <h2>Cast Your Vote</h2>
+      <form id="voting-form">
+        <label for="voter-id">Voter ID:</label>
+        <input
+          type="text"
+          id="voter-id"
+          name="voter-id"
+          placeholder="Enter your Voter ID"
+          required
+        />
+        <label for="email">One Time Voting Pin:</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Enter your Voting Pin"
+          required
+        />
+
+        <label for="candidate">Select Candidate:</label>
+        <select id="candidate" name="candidate" required>
+          <option value="">-- Choose a candidate --</option>
+          <option value="candidate1">Candidate 1</option>
+          <option value="candidate2">Candidate 2</option>
+          <option value="candidate3">Candidate 3</option>
+        </select>
+
+        <button type="submit">Submit Vote</button>
+        <p class="success" id="success-message" style="display: none">
+          Your vote has been submitted successfully!
+        </p>
+      </form>
+    </div>
+    <div class="counts"><h1 class="countss">Every Vote Counts......</h1></div>
+    <footer class="foot">
+      <div class="foot-top">
+        <div class="foot-box">
+          <h2>About Us</h2>
+          <ul>
+            <li>About Us</li>
+            <li>Our Customers</li>
+            <li>Achievements</li>
+            <li>Our Inspirations</li>
+            <li>Our Mission</li>
+            <li>Our Vision</li>
+            <li>Reviews</li>
+          </ul>
+        </div>
+        <div class="foot-box">
+          <h2>Services</h2>
+          <ul>
+            <li>eVoting</li>
+            <li>Security</li>
+            <li>Management</li>
+            <li>Time2justice</li>
+          </ul>
+        </div>
+        <div class="foot-box">
+          <h2>Our Policy</h2>
+          <ul>
+            <li>Privacy Policy</li>
+            <li>Terms of Service</li>
+            <li>Other Policies</li>
+            <li>Certificates</li>
+            <li>Notifications</li>
+            <li>App Permission</li>
+          </ul>
+        </div>
+        <div class="foot-box">
+          <h2>Others</h2>
+          <ul>
+            <li>Videos</li>
+            <li>Blogs</li>
+            <li>Case Studies</li>
+            <li>Help</li>
+            <li>Feedback</li>
+            <li>Sitemap</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const form = document.getElementById("voting-form");
+      const successMessage = document.getElementById("success-message");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent form from refreshing the page
+        successMessage.style.display = "block";
+      });
+    </script>
+  </body>
+</html>

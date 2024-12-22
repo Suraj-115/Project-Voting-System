@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Host Registration</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: antiquewhite;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .registration-form {
+        background-color: rgb(174, 246, 222);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 600px;
+      }
+      .registration-form h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #000000;
+        text-align: center;
+      }
+      .form-group {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+      }
+      .form-group label {
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #000000;
+      }
+      .form-group input,
+      .form-group textarea {
+        padding: 10px;
+        border: 1px solid #dddddd;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+      .form-group textarea {
+        resize: none;
+        height: 80px;
+      }
+      .form-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+      .form-group-full {
+        grid-column: span 2;
+      }
+      .form-group button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .form-group button:hover {
+        background-color: #0056b3;
+      }
+      h2 {
+        color: #03a8fa;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="registration-form" action="/register" method="POST">
+      <h2>Host Registration</h2>
+      <div class="form-container">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Enter your phone number"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="organisation">Organisation Name</label>
+          <input
+            type="text"
+            id="organisation"
+            name="organisation"
+            placeholder="Enter organisation name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="date">Date of Election</label>
+          <input type="date" id="date" name="date" required />
+        </div>
+        <div class="form-group">
+          <label for="candidates">Number of Candidates</label>
+          <input
+            type="number"
+            id="candidates"
+            name="candidates"
+            placeholder="Enter number of candidates"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="voters">Number of Voters</label>
+          <input
+            type="number"
+            id="voters"
+            name="voters"
+            placeholder="Enter number of voters"
+            required
+          />
+        </div>
+        <div class="form-group-full">
+          <label for="purpose">Purpose of Conducting Voting</label>
+          <textarea
+            id="purpose"
+            name="purpose"
+            placeholder="Describe the purpose"
+            required
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="username">Create a Username</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter a username"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Create a Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter a password"
+            required
+          />
+        </div>
+        <div class="form-group-full">
+          <button type="submit">Register</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
