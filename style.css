@@ -3,11 +3,19 @@
     margin: 0;
     padding: 0;
 }
+/* For all icons */
 i{
     margin-top:5px;
     font-size:50px;
 }
-.avii{
+/* For logo */
+
+.logo{
+    height:35px;
+    width:40px;
+}
+
+.upper{
     display: flex;
     justify-content: space-between;
     align-items: center;
