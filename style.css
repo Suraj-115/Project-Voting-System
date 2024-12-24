@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
 }
+
 /* For all icons */
 i{
     margin-top:5px;
@@ -90,9 +91,10 @@ a:hover{
     width: 100%;
 }
 .body h1 {
-    color: #0A2A3D;
+    color: #ff0b0b;
     text-align: center;
     font-size: 3rem;
+    text-decoration: underline rgb(0, 0, 0);
 }
 
 
@@ -133,9 +135,10 @@ a:hover{
 }
 
 .evoting h1{
-    color: #0A2A3D;
+    color: #e50a0a;
     text-align: center;
     font-size: 3rem;
+    text-decoration: underline rgb(0, 0, 0);
 }
 .bigbox2{
     display: flex;
